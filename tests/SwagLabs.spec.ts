@@ -1,6 +1,10 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, } from '@playwright/test';
 
 test('test', async ({ page }) => {
+
+
+
+
     await page.goto('https://www.saucedemo.com/');
 
 
@@ -100,4 +104,5 @@ await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html')
     await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-two.html')
     await page.locator('[data-test="finish"]').click();
     await expect(page).toHaveURL('https://www.saucedemo.com/checkout-complete.html')
+    await page.close();
 });
