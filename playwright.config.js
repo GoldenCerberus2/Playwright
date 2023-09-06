@@ -31,7 +31,7 @@ module.exports = defineConfig({
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
         launchOptions: {
-            slowMo: 500,
+            slowMo: 300,
         },
 
         /* Base URL to use in actions like `await page.goto('/')`. */

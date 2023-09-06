@@ -4,10 +4,12 @@ test('test', async ({ page }) => {
 
 
 
-
+// wejście na stronę
     await page.goto('https://www.saucedemo.com/');
 
 
+
+    // sprawdzenie logowania na wszystkich kontach użytkowników
   await page.locator('[data-test="username"]').click();
   await page.locator('[data-test="username"]').fill('standard_user');
   await page.locator('[data-test="password"]').click();
@@ -21,9 +23,10 @@ test('test', async ({ page }) => {
   await page.locator('[data-test="password"]').click();
   await page.locator('[data-test="password"]').fill('secret_sauce');
     await page.locator('[data-test="login-button"]').click();
+    // sprawdzenie czy przy błędzie logowania pokazuje się informacja
     await expect(page.locator('[data-test="error"]')).toBeVisible
     await expect(page).toHaveURL('https://www.saucedemo.com')
-
+// logowanie na użytkownika z glitchem spowalniającym akcje
   await page.locator('[data-test="username"]').click();
   await page.locator('[data-test="username"]').fill('problem_user');
 
@@ -46,7 +49,7 @@ test('test', async ({ page }) => {
     await page.waitForTimeout(4000);
 
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html')
-
+// sprawdzanie fukcji sortowania
     await page.locator('[data-test="product_sort_container"]').selectOption({ label: 'Name (Z to A)' });
     await page.locator('[data-test="product_sort_container"]').selectOption({ label: 'Price (low to high)' });
     await page.locator('[data-test="product_sort_container"]').selectOption({ label: 'Price (high to low)' });
@@ -56,7 +59,7 @@ test('test', async ({ page }) => {
 
 
 
-
+// sprawdzanie funkcji dodawania do koszyka
   await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
   await page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
   await page.locator('[data-test="add-to-cart-sauce-labs-bolt-t-shirt"]').click();
@@ -71,7 +74,7 @@ await expect(page.locator('text=Remove')).toHaveCount(6)
 
 
 
-
+// sprawdzanie funkcji usuwania przedmiotów z koszyka
 await page.locator('[data-test="remove-sauce-labs-backpack"]').click();
   await page.locator('[data-test="remove-sauce-labs-bike-light"]').click();
   await page.locator('[data-test="remove-sauce-labs-fleece-jacket"]').click();
@@ -89,10 +92,10 @@ await page.locator('[data-test="remove-sauce-labs-backpack"]').click();
   await page.locator('[data-test="add-to-cart-sauce-labs-onesie"]').click();
   await page.locator('[data-test="add-to-cart-test\\.allthethings\\(\\)-t-shirt-\\(red\\)"]').click();
   await page.locator('a').filter({ hasText: '6' }).click();
-
+// sprawdzanie przejscia do strony finalizacji zakupu
     await page.locator('[data-test="checkout"]').click();
 await expect(page).toHaveURL('https://www.saucedemo.com/checkout-step-one.html')
-
+// wypełnienie danych zamówienia i doprowadzenie zamówienia do konca
   await page.locator('[data-test="firstName"]').click();
   await page.locator('[data-test="firstName"]').fill('Janusz');
   await page.locator('[data-test="lastName"]').click();
