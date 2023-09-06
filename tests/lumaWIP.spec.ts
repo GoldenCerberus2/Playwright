@@ -225,7 +225,82 @@ test('test', async ({ page }) => {
   await page.getByRole('link', { name: 'Page 1' }).click();
 
 
+// test linków
 
+
+await page.getByRole('link', { name: 'New Luma Yoga Collection Get fit and look fab in new seasonal styles Shop New Yoga' }).click();
+  await page.getByRole('link', { name: 'Echo Fit Compression Short' }).first().click();
+  await page.getByLabel('28').click();
+  await page.getByLabel('29').click();
+  await page.getByLabel('Black').click();
+  await page.getByLabel('Blue').click();
+  await page.getByLabel('Purple').click();
+  await page.getByLabel('Qty').click();
+  await page.getByLabel('Qty').fill('2');
+  await page.getByRole('button', { name: 'Add to Cart' }).click();
+  await page.getByRole('link', { name: 'More Information ' }).click();
+  await page.getByRole('link', { name: 'Reviews (3) ' }).click();
+  await page.getByRole('link', { name: 'Details ' }).click();
+  await page.getByLabel('Echo Fit Compression Short').first().click();
+  await page.getByLabel('Echo Fit Compression Short').nth(1).click();
+  await page.getByRole('link', { name: 'Home' }).click();
+  await page.getByRole('link', { name: 'New Luma Yoga Collection Get fit and look fab in new seasonal styles Shop New Yoga' }).click();
+  await page.getByRole('link', { name: 'Gwen Drawstring Bike Short' }).first().click();
+  await page.getByLabel('28').click();
+  await page.getByLabel('29').click();
+  await page.getByLabel('30').click();
+  await page.getByLabel('31').click();
+  await page.getByLabel('32').click();
+  await page.getByLabel('Blue').click();
+  await page.getByLabel('Gray').click();
+  await page.getByLabel('Orange').click();
+  await page.getByRole('spinbutton', { name: 'Qty' }).click();
+  await page.getByRole('spinbutton', { name: 'Qty' }).fill('2');
+  await page.getByRole('button', { name: 'Add to Cart' }).click();
+  await page.getByLabel('Gwen Drawstring Bike Short').first().click();
+  await page.getByLabel('Gwen Drawstring Bike Short').nth(2).click();
+  await page.getByRole('link', { name: 'More Information ' }).click();
+  await page.getByRole('link', { name: 'Reviews (2) ' }).click();
+  await page.getByRole('link', { name: 'Details ' }).click();
+  await page.getByRole('link', { name: 'Home' }).click();
+  await page.getByRole('link', { name: 'New Luma Yoga Collection Get fit and look fab in new seasonal styles Shop New Yoga' }).click();
+  await page.getByRole('link', { name: 'Fiona Fitness Short' }).first().click();
+  await page.getByLabel('28').click();
+  await page.getByLabel('29').click();
+  await page.getByLabel('30').click();
+  await page.getByLabel('31').click();
+  await page.getByLabel('32').click();
+  await page.getByLabel('Black').click();
+  await page.getByLabel('Green').click();
+  await page.getByLabel('Red').click();
+  await page.getByRole('spinbutton', { name: 'Qty' }).click();
+  await page.getByRole('spinbutton', { name: 'Qty' }).fill('2');
+  await page.getByRole('button', { name: 'Add to Cart' }).click();
+  await page.getByLabel('Fiona Fitness Short').first().click();
+  await page.getByLabel('Fiona Fitness Short').nth(1).click();
+  await page.getByRole('link', { name: 'More Information ' }).click();
+  await page.getByRole('link', { name: 'Reviews (3) ' }).click();
+  await page.getByRole('link', { name: 'Details ' }).click();
+  await page.getByRole('link', { name: 'Home' }).click();
+  await page.getByRole('link', { name: 'New Luma Yoga Collection Get fit and look fab in new seasonal styles Shop New Yoga' }).click();
+  await page.getByRole('link', { name: 'Fiona Fitness Short' }).first().click();
+  await page.getByLabel('28').click();
+  await page.getByLabel('29').click();
+  await page.getByLabel('30').click();
+  await page.getByLabel('31').click();
+  await page.getByLabel('32').click();
+  await page.getByLabel('Black').click();
+  await page.getByLabel('Green').click();
+  await page.getByLabel('Red').click();
+  await page.getByRole('spinbutton', { name: 'Qty' }).click();
+  await page.getByRole('spinbutton', { name: 'Qty' }).fill('2');
+  await page.getByRole('button', { name: 'Add to Cart' }).click();
+  await page.getByLabel('Fiona Fitness Short').first().click();
+  await page.getByLabel('Fiona Fitness Short').nth(1).click();
+  await page.getByRole('link', { name: 'More Information ' }).click();
+  await page.getByRole('link', { name: 'Reviews (3) ' }).click();
+  await page.getByRole('link', { name: 'Details ' }).click();
+  await page.getByRole('link', { name: 'Home' }).click();
 
 
 
