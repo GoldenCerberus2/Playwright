@@ -55,11 +55,32 @@ await page.locator('li:nth-child(6) > div > .product-item-details > div > .toggl
     await expect(page.locator('#mini-cart').getByText('Purple')).toHaveCount(1);
     await expect(page.locator('#mini-cart').getByText('Black')).toHaveCount(1);
 
-
-
-
-
-
-
-
+    // Finalizing transaction
+    await page.getByRole('button', { name: 'Proceed to Checkout' }).click();
+  await page.getByRole('textbox', { name: 'Email Address *' }).click();
+  await page.getByRole('textbox', { name: 'Email Address *' }).fill('johndoe@domain.com');
+  await page.getByLabel('First Name').click();
+  await page.getByLabel('First Name').fill('Grzegorz');
+  await page.getByLabel('Last Name').click();
+  await page.getByLabel('Last Name').fill('Prządek');
+  await page.getByLabel('Company').click();
+  await page.getByLabel('Company').fill('Testers.inc');
+  await page.getByLabel('Street Address: Line 1').click();
+  await page.getByLabel('Street Address: Line 1').fill('kopernika 10');
+  await page.getByLabel('City').click();
+  await page.getByLabel('City').fill('Swarzędz');
+  await page.getByText('Sign In Close Sign In Email Address Password Sign In Forgot Your Password? Shipp').click();
+  await page.getByLabel('Country').selectOption('PL');
+  await page.locator('select[name="region_id"]').selectOption('700');
+  await page.getByLabel('Zip/Postal Code').click();
+  await page.getByLabel('Zip/Postal Code').fill('62-020');
+  await page.getByLabel('Phone Number').click();
+  await page.getByLabel('Phone Number').fill('123054032');
+  await page.getByPlaceholder('Password').click();
+    await page.getByPlaceholder('Password').fill('1234567890');
+    await page.waitForTimeout(5000);
+    await page.getByRole('button', { name: 'Next' }).click();
+    await page.waitForTimeout(500);
+  await page.getByRole('button', { name: 'Place Order' }).click();
+  await page.getByRole('link', { name: 'Continue Shopping' }).click();
 });
