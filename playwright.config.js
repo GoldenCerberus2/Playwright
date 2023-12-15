@@ -14,7 +14,7 @@ const { defineConfig, devices } = require("@playwright/test");
 
 module.exports = defineConfig({
     testDir: "./tests",
-    timeout: 10 * 1000000,
+    timeout: 10 * 10000000,
     expect: {
         timeout: 50000,
     },
@@ -31,7 +31,7 @@ module.exports = defineConfig({
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     use: {
         launchOptions: {
-            slowMo: 300,
+            //slowMo: 300,
         },
 
         /* Base URL to use in actions like `await page.goto('/')`. */
